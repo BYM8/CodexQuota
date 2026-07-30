@@ -1,0 +1,4 @@
+.build-cache/
+*.zip
+.DS_Store
+CodexQuota.app/
