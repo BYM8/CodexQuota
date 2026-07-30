@@ -52,6 +52,19 @@
 ./uninstall.sh
 ```
 
+## 下载安装包
+
+已发布安装包请到 Releases 下载：
+
+- `CodexQuota-macOS.zip`：macOS 菜单栏应用
+- `CodexQuota-Windows.zip`：Windows PowerShell 托盘版
+
+Releases 地址：
+
+```text
+https://github.com/BYM8/CodexQuota/releases
+```
+
 ## Windows 版本
 
 Windows PowerShell 托盘版位于：
