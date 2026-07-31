@@ -1,0 +1,62 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Windows/CodexQuotaWinExe/**"
+      - ".github/workflows/build-windows-exe.yml"
+      - "README.md"
+      - "docs/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Publish exe
+        run: >
+          dotnet publish .\Windows\CodexQuotaWinExe\CodexQuotaWinExe.csproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:EnableCompressionInSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+
+      - name: Package
+        shell: pwsh
+        run: |
+          $publish = "Windows\CodexQuotaWinExe\bin\Release\net8.0-windows\win-x64\publish"
+          New-Item -ItemType Directory -Force -Path dist\CodexQuotaWin | Out-Null
+          Copy-Item "$publish\CodexQuotaWin.exe" dist\CodexQuotaWin\CodexQuotaWin.exe
+          Copy-Item Windows\CodexQuotaWinExe\README-Windows-EXE.md dist\CodexQuotaWin\README-Windows-EXE.md
+          Compress-Archive -Path dist\CodexQuotaWin -DestinationPath CodexQuota-Windows-EXE.zip -Force
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CodexQuota-Windows-EXE
+          path: CodexQuota-Windows-EXE.zip
+
+      - name: Update v1.0.0 release asset
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          files: CodexQuota-Windows-EXE.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

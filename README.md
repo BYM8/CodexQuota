@@ -23,7 +23,8 @@ https://github.com/BYM8/CodexQuota/releases
 在 Releases 页面选择：
 
 - macOS 用户下载 `CodexQuota-macOS.zip`
-- Windows 用户下载 `CodexQuota-Windows.zip`
+- Windows 用户优先下载 `CodexQuota-Windows-EXE.zip`
+- Windows 备用脚本版下载 `CodexQuota-Windows.zip`
 - 想看源码或二次开发，再下载 `Source code`
 
 ### macOS 安装
@@ -36,14 +37,18 @@ https://github.com/BYM8/CodexQuota/releases
 
 ### Windows 安装
 
-1. 下载 `CodexQuota-Windows.zip`
+推荐使用 EXE 版：
+
+1. 下载 `CodexQuota-Windows-EXE.zip`
 2. 解压到一个固定文件夹，例如桌面或文档目录
 3. 打开 `CodexQuotaWin` 文件夹
-4. 双击运行 `Start-CodexQuotaWin.bat`
+4. 双击运行 `CodexQuotaWin.exe`
 5. 启动后在右下角系统托盘查看图标
 6. 右键托盘图标可以「立即刷新」「打开 Codex 日志目录」「退出」
 
-Windows 新版包不会下载文件、不会隐藏运行、不会绕过执行策略、不会自动写开机启动。如果安全软件提示，请确认文件名来自本项目 Release：`CodexQuota-Windows.zip`。
+Windows EXE 版不会下载文件、不会隐藏脚本、不会绕过执行策略、不会自动写开机启动。如果安全软件提示，请确认文件名来自本项目 Release：`CodexQuota-Windows-EXE.zip`。
+
+如果你的系统无法运行 EXE 版，可以下载备用脚本版 `CodexQuota-Windows.zip`，解压后运行 `Start-CodexQuotaWin.bat`。
 
 ## 环境
 
@@ -90,7 +95,8 @@ Windows 新版包不会下载文件、不会隐藏运行、不会绕过执行策
 已发布安装包请到 Releases 下载：
 
 - `CodexQuota-macOS.zip`：macOS 菜单栏应用
-- `CodexQuota-Windows.zip`：Windows PowerShell 托盘版
+- `CodexQuota-Windows-EXE.zip`：Windows EXE 托盘版，推荐普通用户使用
+- `CodexQuota-Windows.zip`：Windows PowerShell 托盘版，备用
 
 Releases 地址：
 
@@ -100,13 +106,25 @@ https://github.com/BYM8/CodexQuota/releases
 
 ## Windows 版本
 
-Windows PowerShell 托盘版位于：
+Windows EXE 版源码位于：
+
+```text
+Windows/CodexQuotaWinExe
+```
+
+Windows PowerShell 备用版位于：
 
 ```text
 Windows/CodexQuotaWin
 ```
 
-解压 Windows 安装包后，右键运行：
+EXE 版解压后运行：
+
+```text
+CodexQuotaWin.exe
+```
+
+备用脚本版解压后运行：
 
 ```text
 Start-CodexQuotaWin.bat

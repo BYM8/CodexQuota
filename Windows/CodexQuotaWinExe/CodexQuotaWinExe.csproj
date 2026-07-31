@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>CodexQuotaWin</AssemblyName>
+    <RootNamespace>CodexQuotaWin</RootNamespace>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Authors>程橙Ai 联合老表软件库</Authors>
+    <Description>Codex 余量 Windows 托盘工具</Description>
+    <Copyright>程橙Ai 联合老表软件库 制作</Copyright>
+  </PropertyGroup>
+</Project>
