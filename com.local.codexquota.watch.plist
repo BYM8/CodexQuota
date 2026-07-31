@@ -6,7 +6,9 @@
   <string>com.local.codexquota.watch</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/jiangyongming/Library/Application Support/CodexQuota/codexquota-watch.sh</string>
+    <string>/bin/bash</string>
+    <string>-lc</string>
+    <string>"$HOME/Library/Application Support/CodexQuota/codexquota-watch.sh"</string>
   </array>
   <key>RunAtLoad</key>
   <true/>
