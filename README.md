@@ -12,6 +12,39 @@
 
 本项目采用 MIT License 开源，欢迎学习、二次开发和分享。
 
+## 普通用户怎么安装
+
+不要直接下载 GitHub 绿色的 `Code` 源码包。普通用户请进入 Releases 下载已经打包好的版本：
+
+```text
+https://github.com/BYM8/CodexQuota/releases
+```
+
+在 Releases 页面选择：
+
+- macOS 用户下载 `CodexQuota-macOS.zip`
+- Windows 用户下载 `CodexQuota-Windows.zip`
+- 想看源码或二次开发，再下载 `Source code`
+
+### macOS 安装
+
+1. 下载 `CodexQuota-macOS.zip`
+2. 解压后得到 `CodexQuota.app`
+3. 双击打开，或者拖到「应用程序」文件夹
+4. 启动后在顶部菜单栏查看余量百分比
+5. 如果系统提示来自互联网，请在「系统设置 > 隐私与安全性」里允许打开
+
+### Windows 安装
+
+1. 下载 `CodexQuota-Windows.zip`
+2. 解压到一个固定文件夹，例如桌面或文档目录
+3. 打开 `CodexQuotaWin` 文件夹
+4. 双击运行 `Start-CodexQuotaWin.bat`
+5. 启动后在右下角系统托盘查看图标
+6. 右键托盘图标可以「立即刷新」「打开 Codex 日志目录」「退出」
+
+Windows 新版包不会下载文件、不会隐藏运行、不会绕过执行策略、不会自动写开机启动。如果安全软件提示，请确认文件名来自本项目 Release：`CodexQuota-Windows.zip`。
+
 ## 环境
 
 - macOS 12 或更高版本
