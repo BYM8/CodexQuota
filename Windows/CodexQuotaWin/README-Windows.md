@@ -4,13 +4,22 @@ Windows PowerShell 托盘版 Codex 余量工具。
 
 ## 安装
 
-右键运行 `install.bat`。
+新版 Windows 包不再提供自动安装脚本，避免被安全软件误判。
 
-安装后会：
+解压后双击或右键运行：
 
-- 复制 `CodexQuotaWin.ps1` 到 `%LOCALAPPDATA%\CodexQuotaWin`
-- 创建开机启动快捷方式
-- 启动系统托盘图标
+```text
+Start-CodexQuotaWin.bat
+```
+
+这个启动脚本只做一件事：用 PowerShell 打开本目录里的 `CodexQuotaWin.ps1`。
+
+它不会：
+
+- 下载任何文件
+- 隐藏运行
+- 绕过执行策略
+- 自动写入开机启动项
 
 ## 使用
 
@@ -21,4 +30,11 @@ Windows PowerShell 托盘版 Codex 余量工具。
 
 ## 卸载
 
-运行 `uninstall.bat`，然后右键托盘图标退出。
+右键托盘图标选择「退出」，然后删除解压出来的文件夹即可。
+
+如果你之前安装过旧版，请先删除：
+
+```text
+%LOCALAPPDATA%\CodexQuotaWin
+%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\CodexQuotaWin.lnk
+```

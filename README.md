@@ -76,13 +76,13 @@ Windows/CodexQuotaWin
 解压 Windows 安装包后，右键运行：
 
 ```text
-install.bat
+Start-CodexQuotaWin.bat
 ```
 
-卸载时运行：
+新版 Windows 包不会隐藏运行、不会绕过执行策略、不会自动写开机启动。退出时右键托盘图标选择：
 
 ```text
-uninstall.bat
+退出
 ```
 
 ## 中文说明书
